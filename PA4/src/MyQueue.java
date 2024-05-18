@@ -38,14 +38,14 @@ public class MyQueue<T> {
         if (isEmpty()) {
             throw new NoSuchElementException();
         }
-        return elements.removeLast();
+        return elements.remove(0);
     }
 
     public T peek() {
         if (isEmpty()) {
             throw new NoSuchElementException();
         }
-        return elements.getLast();
+        return elements.get(0);
     }
 
     @Override

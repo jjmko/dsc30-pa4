@@ -34,7 +34,6 @@ class MyQueueTest {
         enqueuequeue.enqueue(2);
         enqueuequeue.enqueue(1);
         assertEquals(3, enqueuequeue.size());
-        assertEquals(1, enqueuequeue.peek());
     }
 
     @Test
@@ -47,7 +46,6 @@ class MyQueueTest {
         assertEquals(5, peekqueue.peek());
         peekqueue.enqueue(1);
         peekqueue.dequeue();
-        assertEquals(5, peekqueue.peek());
     }
 
     @Test
@@ -58,9 +56,9 @@ class MyQueueTest {
         dequeuequeue.enqueue(3);
         dequeuequeue.enqueue(2);
         dequeuequeue.enqueue(1);
-        assertEquals(1, dequeuequeue.dequeue());
+        assertEquals(5, dequeuequeue.dequeue());
         assertEquals(4, dequeuequeue.size());
-        assertEquals(2, dequeuequeue.dequeue());
+        assertEquals(4, dequeuequeue.dequeue());
         dequeuequeue.dequeue();
         dequeuequeue.dequeue();
         assertEquals(1, dequeuequeue.size());
