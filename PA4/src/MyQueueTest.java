@@ -42,10 +42,8 @@ class MyQueueTest {
         assertThrows(NoSuchElementException.class, () -> {
             peekqueue.peek();
         });
-        peekqueue.enqueue(5);
-        assertEquals(5, peekqueue.peek());
-        peekqueue.enqueue(1);
-        peekqueue.dequeue();
+        peekqueue.enqueue(20);
+        assertEquals(20, peekqueue.peek());
     }
 
     @Test
